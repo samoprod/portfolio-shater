@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Инструкция по коду</title>
+	<style>
+		body{
+			font-family: Roboto, Helvetica, Arial, sans-serif;
+			background-color: #252525;
+			color: #f5f5f5;
+			line-height: 1.35;
+		}
+	</style>
+</head>
+<body>
+
+<h1>1. Шапка</h1>
+<p>Логотип в шапке - <b>.header-logo</b></p>
+<p>Кнопка "Открыть меню" - <b>.header-menu__icon</b></p>
+<p>Блок "Часы работы" - <b>.header-hours</b></p>
+<p>Блок "Адрес и почта" - <b>.header-address</b></p>
+<p>Блок "Номера телефонов" - <b>.header-phone</b></p>
+<p>Меню в шапке - <b>.header-menu</b></p>
+<p>Меню выводим <b>ul списком</b> в "<b>header-menu</b>" с классом "<b>header-menu__list</b>". Пример:</p>
+
+
+<pre>
+	&lt;ul class=&quot;header-menu__list&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Шатры&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Тенты&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Полы&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Посуда&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Мебель&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ограждения&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Доп.оборудование&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Выставочное оборудование&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Оформление&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+</pre>
+
+<h2>В WP это выглядит примерно так:</h2>
+
+<pre>
+	wp_nav_menu( [
+		'menu_class' => 'header-menu__list', 
+		'items_wrap' => '&lt;ul class=&quot;%2$s&quot;&gt;%3$s&lt;/ul&gt;',
+	] );
+</pre>
+
+<br /><hr /><br />
+
+
+<h1>2. Секции</h1>
+
+<b>1. Секции с продуктами(Тенты, стулья и т.д.)</b>
+<ul>
+	<li>Ко всем секциям применить класс "section". Пример:
+		<pre>&lt;section class=&quot;section&quot;&gt;&lt;/section&gt;</pre>
+	</li>
+	<li>Загаловок секции выводить в теге h1 с классом section-title. Пример:
+		<pre>&lt;h1 class=&quot;section-title products__title&quot;&gt;Тенты&lt;/h1&gt;</pre>
+	</li>
+	<li>Товары выводить в div с классом products-wrap</li>
+	<li>Структура товара:
+		<pre>
+	&lt;div class=&quot;products-item&quot;&gt;
+
+		<b>products-item__sale - Это круглый ярлык на правом краю товара. Добавить только при необходимости</b>
+		&lt;div class=&quot;<b>products-item__sale</b>&quot;&gt;Sale&lt;/div&gt;
+
+		&lt;a href=&quot;<b>permalink</b>&quot;&gt;
+			&lt;div class=&quot;products-item__img ibg&quot;&gt;
+				&lt;img src=&quot;<b>image link</b>&quot; alt=&quot;Продукт&quot; /&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+		&lt;h3 class=&quot;products-item__title&quot;&gt;&lt;a href=&quot;#&quot;&gt;<b>Загаловок</b>&lt;/a&gt;&lt;/h3&gt;
+		&lt;div class=&quot;products-item__price&quot;&gt;
+			3499.00 р.
+
+			<b>products-item__price-old - Это старая цена. Добавить только при необходимости</b>
+			&lt;span class=&quot;<b>products-item__price-old</b>&quot;&gt;4499 р.&lt;/span&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+		</pre>
+	</li>
+	<li>
+		<b>Если хотите показывать при наведении другую картину, просто добавляете это:</b>
+		<pre>
+	&lt;div class=&quot;products-item__img products-item__img--hover ibg&quot;&gt;
+		&lt;img src=&quot;img/products-section/01-hover.jpg&quot; alt=&quot;Продукт&quot; /&gt;
+	&lt;/div&gt;
+		</pre>
+		<b>перед products-item__img. Пример:</b>
+		<pre>
+	&lt;!-- products-item__img--hover - Картина которая появляется при наведении(если нет такой картины - удалить этот блок) --&gt;
+	&lt;div class=&quot;products-item__img products-item__img--hover ibg&quot;&gt;
+		&lt;img src=&quot;img/products-section/01-hover.jpg&quot; alt=&quot;Продукт&quot; /&gt;
+	&lt;/div&gt;
+	&lt;!-- Картина блока --&gt;
+	&lt;div class=&quot;products-item__img ibg&quot;&gt;
+		&lt;img src=&quot;img/products-section/01.jpg&quot; alt=&quot;Продукт&quot; /&gt;
+	&lt;/div&gt;
+		</pre>
+	</li>
+</ul>
+
+<br /><br />
+
+<b>2. Секция с одним товаром - one_product_page</b>
+<ul>
+	<li>Ко всем секциям применить класс "section". Пример:
+		<pre>&lt;section class=&quot;section&quot;&gt;&lt;/section&gt;</pre>
+	</li>
+	<li>Изображения выводить в div с классами fotorama inner-gallery</li>
+</ul>
+
+
+<br /><hr /><br />
+
+<h2>Важные классы</h2>
+<p>Для валидации любой формы достаточно добавить несколько классов к input-ам</p>
+<ul>
+	<li>class="req" - обязательное поле</li>
+	<li>class="name" - Нужно ввести не менее 3х символов, чтобы валидация прошла успешна(для имени)</li>
+	<li>class="email" - Нужно ввести правильный email. Пример: site@example.com</li>
+	<li>class="phone" - Добавляет маску к полю( +7(999) 999 9999 )</li>
+	<br />
+	<li>Чтобы добавить красивый чекбокс - достаточно создать такую структуру
+<pre>
+&lt;div class=&quot;check&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; /&gt;
+&lt;/div&gt;
+</pre>
+	</li>
+	<br />
+	<li>class="btn" - Сделает большую круглую кнопку из простой кнопки</li>
+	<li>class="btn fw" - Та же кнопка расширится по всей ширине родителя</li>
+</ul>
+
+
+<br /><hr /><br />
+
+
+<h2>*. Всплывающие окна: Попапы</h2>
+
+<p>
+	
+	<b>КНОПКА Заказать звонок:</b><br>
+	Чтобы вешать всплывающее окно "Обратный звонок" к ссылке, нужно добавить к ссылке класс "pl" и в артрибуте href написать #callback. Пример:
+	&lt;a href=&quot;#callback&quot; class=&quot;pl&quot;&gt;Заказать звонок&lt;/a&gt;
+
+</p>
+
+<p>
+	<b>КНОПКА Политика  конфиденциальности:</b><br>
+	Чтобы вешать всплывающее окно "Обратный звонок" к ссылке, нужно добавить к ссылке класс "pl" и в артрибуте href написать #polytics. Пример:
+	&lt;a href=&quot;#polytics&quot; class=&quot;pl&quot;&gt;Политика  конфиденциальности&lt;/a&gt;
+</p>
+
+
+</body>
+</html>

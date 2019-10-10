@@ -14,14 +14,14 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="no-js">
 	<div class="wrapper">
 		<header class="header">
 		<div class="container">
 			<!-- Вверхняя часть шапки -->
 			<div class="header-top">
 				<div class="header-logo">
-					<a href="" class="header__logo"><img src="img/logo.png" alt="Логотип" /></a>
+					<a href="/"><img src="img/logo.png" alt="Логотип" /></a>
 				</div>
 				<!-- Кнопка открытия меню -->
 				<div class="header-menu__icon">
@@ -73,6 +73,7 @@
 
 		<section class="section contacts">
 			<div class="container">
+				<!-- Загаловок секции -->
 				<h1 class="section-title">Контакты</h1>
 				<div class="contacts-wrap">
 					<div class="contacts-info">
@@ -89,7 +90,7 @@
 						<div class="contacts-form">
 							<form class="contacts-form__form">
 								<input autocomplete="off" type="text" name="form[]" data-value="Имейл" class="input email req" />
-								<input autocomplete="off" type="text" name="form[]" data-value="Имя" class="input req" />
+								<input autocomplete="off" type="text" name="form[]" data-value="Имя" class="input name req" />
 								<input autocomplete="off" type="text" name="form[]" data-value="Телефон" class="input phone req" />
 								<button type="submit" class="contacts-form__btn btn">Отправить</button>
 							</form>
@@ -100,6 +101,7 @@
 						<h2 class="contacts-info__title">Приезжайте к нам в офис:</h2>
 						<p class="contacts-info__text">Шаническая набережная, д. 23А</p>
 						<div class="contacts-map">
+							<!-- Карта. Можно заменить весь iframe. Генерировать в Google Maps -->
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.233244734456!2d37.6142182075822!3d55.7578119000477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4468e66b9c8037dd!2z0KTQvtC90YLQsNC9INCS0LjRgtCw0LvQuA!5e0!3m2!1sru!2s!4v1570661565151!5m2!1sru!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 						</div>
 					</div>
@@ -183,7 +185,7 @@
 				<div class="popup__title">Форма обратного звонка</div>
 				<form action="" class="popup-form">
 					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input req" />
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input name req" />
 					</div>
 					<div class="form-input">
 						<input autocomplete="off" type="tel" name="form[]" data-value="Ваш телефон" class="input req phone" />

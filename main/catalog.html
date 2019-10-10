@@ -11,14 +11,14 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
-<body>
+<body class="no-js">
 	<div class="wrapper">
 		<header class="header">
 		<div class="container">
 			<!-- Вверхняя часть шапки -->
 			<div class="header-top">
 				<div class="header-logo">
-					<a href="" class="header__logo"><img src="img/logo.png" alt="Логотип" /></a>
+					<a href="/"><img src="img/logo.png" alt="Логотип" /></a>
 				</div>
 				<!-- Кнопка открытия меню -->
 				<div class="header-menu__icon">
@@ -78,15 +78,19 @@
 							<div class="range-price catalog-filter__item active">
 								<h3 class="catalog-filter__title">Фильтрация по цене </h3>
 								<div class="catalog-filter__body">
+									<!-- data-min-price - минимальное кол-во денег -->
+									<!-- data-max-price - максимальное кол-во денег -->
 									<div id="range-price" data-min-price="100" data-max-price="5000"></div>
 									<div class="range-price-wrap">
 										<label for="range-price-min" class="range-price-inp range-min">
 											от
+											<!-- value установить то же значение, что и data-min-price -->
 											<input type="text" id="range-price-min" value="100" readonly>
 											р.
 										</label>
 										<label for="range-price-max" class="range-price-inp range-max">
 											до
+											<!-- value установить то же значение, что и data-max-price -->
 											<input type="text" id="range-price-max" value="5000" readonly>
 											р.
 										</label>
@@ -96,24 +100,25 @@
 							<div class="catalog-filter__item">
 								<h3 class="catalog-filter__title">По цвету</h3>
 								<div class="catalog-filter__body">
+									<!-- Чтобы добавить новый параметр, достаточно копировать один div с классом check и поменять значение -->
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Красный" class="checkbox" name="form[]"/>
 										Красный
 									</div>
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Синий" class="checkbox" name="form[]"/>
 										Синий
 									</div>
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Оранжевый" class="checkbox" name="form[]"/>
 										Оранжевый
 									</div>
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Зелёный" class="checkbox" name="form[]"/>
 										Зелёный
 									</div>
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Чёрный" class="checkbox" name="form[]"/>
 										Чёрный
 									</div>
 								</div>
@@ -122,23 +127,23 @@
 								<h3 class="catalog-filter__title">По параметрам</h3>
 								<div class="catalog-filter__body">
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Параметр" class="checkbox" name="form[]"/>
 										Параметр
 									</div>
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Параметр" class="checkbox" name="form[]"/>
 										Параметр
 									</div>
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Параметр" class="checkbox" name="form[]"/>
 										Параметр
 									</div>
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Параметр" class="checkbox" name="form[]"/>
 										Параметр
 									</div>
 									<div class="check">
-										<input type="checkbox" class="checkbox" name="form[]"/>
+										<input type="checkbox" value="Параметр" class="checkbox" name="form[]"/>
 										Параметр
 									</div>
 								</div>
@@ -383,7 +388,7 @@
 				<div class="popup__title">Форма обратного звонка</div>
 				<form action="" class="popup-form">
 					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input req" />
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input name req" />
 					</div>
 					<div class="form-input">
 						<input autocomplete="off" type="tel" name="form[]" data-value="Ваш телефон" class="input req phone" />

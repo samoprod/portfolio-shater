@@ -10,15 +10,18 @@
 	<!-- <meta name="robots" content="noindex, nofollow" /> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
 </head>
-<body>
+<body class="no-js">
 	<div class="wrapper">
 		<header class="header">
 		<div class="container">
 			<!-- Вверхняя часть шапки -->
 			<div class="header-top">
 				<div class="header-logo">
-					<a href="" class="header__logo"><img src="img/logo.png" alt="Логотип" /></a>
+					<a href="/"><img src="img/logo.png" alt="Логотип" /></a>
 				</div>
 				<!-- Кнопка открытия меню -->
 				<div class="header-menu__icon">
@@ -102,12 +105,14 @@
 				</div>
 
 				<div class="pagging">
-					<div class="pagging-list">
-						<li><a href="#" class="pagging__link">1</a></li>
+					<a href="#" class="pagging__arrow"></a>
+					<ul class="pagging-list">
+						<li><a href="#" class="pagging__link active">1</a></li>
 						<li><a href="#" class="pagging__link">2</a></li>
 						<li><a href="#" class="pagging__link">3</a></li>
 						<li><a href="#" class="pagging__link">4</a></li>
-					</div>
+					</ul>
+					<a href="#" class="pagging__arrow"></a>
 				</div>
 			</div>
 		</div>
@@ -188,7 +193,7 @@
 				<div class="popup__title">Форма обратного звонка</div>
 				<form action="" class="popup-form">
 					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input req" />
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input name req" />
 					</div>
 					<div class="form-input">
 						<input autocomplete="off" type="tel" name="form[]" data-value="Ваш телефон" class="input req phone" />

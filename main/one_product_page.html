@@ -21,7 +21,7 @@
 			<!-- Вверхняя часть шапки -->
 			<div class="header-top">
 				<div class="header-logo">
-					<a href="" class="header__logo"><img src="img/logo.png" alt="Логотип" /></a>
+					<a href="/"><img src="img/logo.png" alt="Логотип" /></a>
 				</div>
 				<!-- Кнопка открытия меню -->
 				<div class="header-menu__icon">
@@ -76,15 +76,26 @@
 				<div class="product-one__wrap">
 					<div class="product-one__images">
 						<div class="fotorama inner-gallery">
+							<!-- Изображения товара выводить здесь -->
+							<!-- href - изображение с полным размером -->
+							<!-- data-thumb - ссылка на миниатюры изображения(маленькая версия того же изображения. Если нет возможности, можно убрать атрибут data-thumb) -->
 							<a href="img/product-one/01.jpg" data-thumb="img/product-one/01-thumb.jpg"></a>
 							<a href="img/product-one/02.jpg" data-thumb="img/product-one/02-thumb.jpg"></a>
 							<a href="img/product-one/03.jpg" data-thumb="img/product-one/03-thumb.jpg"></a>
 						</div>
 					</div>
 					<div class="product-one__info">
+						<!-- Загаловок -->
 						<h1 class="product-one__title">Coral Note</h1>
-						<p class="product-one__price">500.00 р.</p>
+						<!-- Цена -->
+						<p class="product-one__price">
+							500.00 р.
+							<!-- Старая цена(если есть). Если нет - удалить тег span -->
+							<span class="products-item__price-old">4499 р.</span>
+						</p>
+						<!-- Описание товара -->
 						<p class="product-one__description">Коралловая тетрадь формата А5, 42 страницы слоновой кости.</p>
+						<!-- Кнопка купить -->
 						<a href="#" class="product-one-btn">Купить</a>
 					</div>
 				</div>
@@ -167,7 +178,7 @@
 				<div class="popup__title">Форма обратного звонка</div>
 				<form action="" class="popup-form">
 					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input req" />
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input name req" />
 					</div>
 					<div class="form-input">
 						<input autocomplete="off" type="tel" name="form[]" data-value="Ваш телефон" class="input req phone" />
