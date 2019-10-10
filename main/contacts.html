@@ -40,7 +40,7 @@
 				<div class="header-phone">
 					<a href="tel:+79670103600" class="header-phone__item">+7(967) 010-36-00</a>
 					<a href="tel:+79268787483" class="header-phone__item">+7(926) 87-87-483</a>
-					<a href="#" class="header-phone__btn">Заказать звонок</a>
+					<a href="#callback" class="header-phone__btn pl">Заказать звонок</a>
 				</div>
 			</div>
 		</div>
@@ -133,7 +133,7 @@
 				<div class="footer-phones">
 					<a href="tel:+79670103600" class="footer-phones__item">+7(967) 010-36-00</a>
 					<a href="tel:+79268787483" class="footer-phones__item">+7(926) 87-87-483</a>
-					<a href="#" class="footer-phones__btn">Заказать обратный звонок</a>
+					<a href="#callback" class="footer-phones__btn pl">Заказать обратный звонок</a>
 				</div>
 				<div class="footer-payments">
 					<h6 class="footer-payments__title">Мы принимаем к оплате</h6>
@@ -171,50 +171,63 @@
 						</a></li>
 					</ul>
 				</div>
-				<a href="#" class="footer-polyticslink">Политика  конфиденциальности</a>
+				<a href="#polytics" class="footer-polyticslink pl">Политика  конфиденциальности</a>
 			</div>
 		</div>
 	</div>
 </footer>
 	</div>
-	<div class="popup">
+	<div class="popup popup-callback">
 	<div class="popup-table table">
 		<div class="cell">
 			<div class="popup-content">
 				<div class="popup-close"></div>
-				<div class="popup__title"></div>
-				<div class="popup__txt"></div>
-				<form action="#" class="popup-form form">
+				<div class="popup__title">Форма обратного звонка</div>
+				<form action="" class="popup-form">
 					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input req" />
 					</div>
 					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
+						<input autocomplete="off" type="tel" name="form[]" data-value="Ваш телефон" class="input req phone" />
 					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
+					<div class="form-checkbox">
+						<div class="check">
+							<input type="checkbox" name="form[]" class="checkbox req" checked="checked" />
+							Я соглашаюсь на обработку введённых мною данных
+						</div>
 					</div>
 					<div class="form-button">
-						<button type="submit" class="form__btn btn fw"></button>
+						<button type="submit" class="form__btn btn fw">Заказать звонок</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="popup popup-video">
+
+
+
+
+<div class="popup popup-polytics">
 	<div class="popup-table table">
 		<div class="cell">
-			<div class="popup-close"></div>
-			<div class="popup-video__value"></div>
+			<div class="popup-content">
+				<div class="popup-close"></div>
+				<div class="popup__title">Политика  конфиденциальности</div>
+				<div class="popup__text">
+					<p>Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года свободно, своей волей и в своем интересе выражаю свое безусловное согласие на обработку моих персональных данных ООО «Эккарт», ОГРН 1157746566340, ИНН 7722331646, зарегистрированным в соответствии с законодательством РФ по адресу: г. Москва, ул. Тагильская, д.6 стр.1 (далее по тексту - Оператор). Персональные данные - любая информация, относящаяся к определенному или определяемому на основании такой информации физическому лицу. Настоящее Согласие выдано мною на обработку следующих персональных данных: - Телефон.</p>
+					<p>Согласие дано Оператору для совершения следующих действий с моими персональными данными с использованием средств автоматизации и/или без использования таких средств: сбор, систематизация, накопление, хранение, уточнение (обновление, изменение), использование, обезличивание, а также осуществление любых иных действий, предусмотренных действующим законодательством РФ как неавтоматизированными, так и автоматизированными способами.</p>
+					<p>Данное согласие дается Оператору для обработки моих персональных данных в следующих целях: - предоставление мне услуг/работ; - направление в мой адрес уведомлений, касающихся предоставляемых услуг/работ; - подготовка и направление ответов на мои запросы; - направление в мой адрес информации, в том числе рекламной, о мероприятиях/товарах/услугах/работах Оператора.</p>
+					<p>Настоящее согласие действует до момента его отзыва путем направления соответствующего уведомления на электронный адрес 6140812@mail.ru. В случае отзыва мною согласия на обработку персональных данных Оператор вправе продолжить обработку персональных данных без моего согласия при наличии оснований, указанных в пунктах 2 11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона №152-ФЗ «О персональных данных» от 26.06.2006 г."</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/vendors.js"></script>
 <script src="js/main.js"></script>
-<!-- <script src="js/custom.js" ></script> -->
-
 </body>
 </html>
