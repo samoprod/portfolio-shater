@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Продукт Coral Note | Ваш шатёр</title>
+	<title>Главная | Ваш шатёр</title>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="no-js">
 	<div class="wrapper">
 		<header class="header">
 		<div class="container">
@@ -70,38 +70,168 @@
 			</div>
 		</div>
 </header>
-
-		<section class="section product-one">
+		
+		<section class="section products">
 			<div class="container">
-				<div class="product-one__wrap">
-					<div class="product-one__images">
-						<div class="fotorama inner-gallery">
-							<!-- Изображения товара выводить здесь -->
-							<!-- href - изображение с полным размером -->
-							<!-- data-thumb - ссылка на миниатюры изображения(маленькая версия того же изображения. Если нет возможности, можно убрать атрибут data-thumb) -->
-							<a href="img/product-one/01.jpg" data-thumb="img/product-one/01-thumb.jpg"></a>
-							<a href="img/product-one/02.jpg" data-thumb="img/product-one/02-thumb.jpg"></a>
-							<a href="img/product-one/03.jpg" data-thumb="img/product-one/03-thumb.jpg"></a>
+				<h1 class="section-title products__title">Тенты</h1>
+				<div class="products-wrap">
+					<div class="products-item">
+						<a href="#" class="products-item__link">
+							<!-- products-item__img--hover - Картина которая появляется при наведении(если нет такой картины - удалить этот блок) -->
+							<div class="products-item__img products-item__img--hover ibg">
+								<img src="img/products-section/01-hover.jpg" alt="Продукт" />
+							</div>
+							<!-- Картина блока -->
+							<div class="products-item__img ibg">
+								<img src="img/products-section/01.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Блокноты от Brandbook</a></h3>
+						<div class="products-item__price">
+							699.00 р
 						</div>
 					</div>
-					<div class="product-one__info">
-						<!-- Загаловок -->
-						<h1 class="product-one__title">Coral Note</h1>
-						<!-- Цена -->
-						<p class="product-one__price">
-							500.00 р.
-							<!-- Старая цена(если есть). Если нет - удалить тег span -->
-							<span class="products-item__price-old">4499 р.</span>
-						</p>
-						<!-- Описание товара -->
-						<p class="product-one__description">Коралловая тетрадь формата А5, 42 страницы слоновой кости.</p>
-						<!-- Кнопка купить -->
-						<a href="#" class="product-one-btn">Купить</a>
+					<div class="products-item">
+						<div class="products-item__sale">
+							Sale
+						</div>
+						<!-- Картина блока -->
+						<a href="#">
+							<div class="products-item__img ibg">
+								<img src="img/products-section/02.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Часы Multi</a></h3>
+						<div class="products-item__price">
+							3499.00 р. <span class="products-item__price-old">4499 р.</span>
+						</div>
+					</div>
+					<div class="products-item">
+						<!-- Картина блока -->
+						<a href="#">
+							<div class="products-item__img ibg">
+								<img src="img/products-section/03.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Постер Pink</a></h3>
+						<div class="products-item__price">
+							1999.00 р.
+						</div>
+					</div>
+					<div class="products-item">
+						<!-- Картина блока -->
+						<a href="#">
+							<div class="products-item__img ibg">
+								<img src="img/products-section/04.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Блокноты Monocle Summer Notes</a></h3>
+						<div class="products-item__price">
+							799.00 р.
+						</div>
+					</div>
+
+					<div class="products-item">
+						<a href="#" class="products-item__link">
+							<!-- Картина блока -->
+							<div class="products-item__img ibg">
+								<img src="img/products-section/05.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Часы Rainbow</a></h3>
+						<div class="products-item__price">
+							3699.00 р <span class="products-item__price-old">4499 р.</span>
+						</div>
+					</div>
+					<div class="products-item">
+						<!-- Картина блока -->
+						<a href="#">
+							<div class="products-item__img ibg">
+								<img src="img/products-section/06.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Сумка из хлопка</a></h3>
+						<div class="products-item__price">
+							499.00 р. <span class="products-item__price-old">699 р.</span>
+						</div>
+					</div>
+					<div class="products-item">
+						<!-- Картина блока -->
+						<a href="#">
+							<div class="products-item__img ibg">
+								<img src="img/products-section/07.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Городской рюкзак Pee</a></h3>
+						<div class="products-item__price">
+							3699.00 р.
+						</div>
+					</div>
+					<div class="products-item">
+						<!-- Картина блока -->
+						<a href="#">
+							<div class="products-item__img ibg">
+								<img src="img/products-section/08.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Многогранный календарь Peco</a></h3>
+						<div class="products-item__price">
+							4499.00 р.
+						</div>
+					</div>
+
+					<div class="products-item">
+						<a href="#" class="products-item__link">
+							<!-- Картина блока -->
+							<div class="products-item__img ibg">
+								<img src="img/products-section/09.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Настенные зеркала Ankh</a></h3>
+						<div class="products-item__price">
+							2699.00 р
+						</div>
+					</div>
+					<div class="products-item">
+						<!-- Картина блока -->
+						<a href="#">
+							<div class="products-item__img ibg">
+								<img src="img/products-section/10.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Часы с градиентом Multi</a></h3>
+						<div class="products-item__price">
+							3699.00 р. <span class="products-item__price-old">4299.00 р.</span>
+						</div>
+					</div>
+					<div class="products-item">
+						<!-- Картина блока -->
+						<a href="#">
+							<div class="products-item__img ibg">
+								<img src="img/products-section/11.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Подвеска Adornmilk</a></h3>
+						<div class="products-item__price">
+							3699.00 р. <span class="products-item__price-old">3999.00 р.</span>
+						</div>
+					</div>
+					<div class="products-item">
+						<!-- Картина блока -->
+						<a href="#">
+							<div class="products-item__img ibg">
+								<img src="img/products-section/12.jpg" alt="Продукт" />
+							</div>
+						</a>
+						<h3 class="products-item__title"><a href="#">Беспроводная колонка</a></h3>
+						<div class="products-item__price">
+							2499.00 р.
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
+		
 		<footer>
 	<div class='container'>
 		<div class="footer-body">
